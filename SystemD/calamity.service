@@ -1,0 +1,14 @@
+[Unit]
+Description=Update and Run Calamity Server
+After=network.target
+
+[Service]
+Type=simple
+Restart=never
+User=rootless
+Group=rootless
+ExecStartPre=/bin/bash "/home/rootless/bootstrap.sh install"
+ExecStart=/usr/bin/screen -DmS calamity /bin/bash "/home/rootless/bootstrap.sh start"
+
+[Install]
+WantedBy=multi-user.target
