@@ -6,7 +6,7 @@
 
 bootstrap_version="1.3"
 steam_cmd=/usr/games/steamcmd
-folder="/home/rootlessrunner/.local/share/Steam/steamapps/common/tModLoader"
+folder="/home/rootless/.local/share/Steam/steamapps/common/tModLoader"
 
 username=$STEAM_USERNAME
 
