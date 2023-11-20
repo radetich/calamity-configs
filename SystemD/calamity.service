@@ -4,11 +4,12 @@ After=network.target
 
 [Service]
 Type=simple
-Restart=never
+Restart=always
+RestartSec=200
 User=rootless
 Group=rootless
-ExecStartPre=/bin/bash "/home/rootless/bootstrap.sh install"
-ExecStart=/usr/bin/screen -DmS calamity /bin/bash "/home/rootless/bootstrap.sh start"
+ExecStartPre=/bin/bash /home/rootless/bootstrap.sh install
+ExecStart=/usr/bin/screen -DmS calamity /bin/bash /home/rootless/bootstrap.sh start
 
 [Install]
 WantedBy=multi-user.target
